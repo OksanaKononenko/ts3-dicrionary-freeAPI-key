@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій англійський словник</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>Мій словник</h1>
+
+<div class="language-selectors">
+
+  <select id="source-language">
+    <option value="uk">🇺🇦 Українська</option>
+    <option value="en">🇬🇧 English</option>
+    <!-- <option value="de">🇩🇪 Deutsch</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="pl">🇵🇱 Polski</option>
+    <option value="cs">🇨🇿 Čeština</option>
+    <option value="ro">🇷🇴 Română</option> -->
+  </select>
+<!-- 
+  <button id="swap-languages-btn" type="button">
+  ⇄
+</button> -->
+
+<span>></span>
+
+  <select id="target-language">
+    <option value="en">🇬🇧 English</option>
+    <option value="uk">🇺🇦 Українська</option>
+    <!-- <option value="de">🇩🇪 Deutsch</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="pl">🇵🇱 Polski</option>
+    <option value="cs">🇨🇿 Čeština</option>
+    <option value="ro">🇷🇴 Română</option> -->
+  </select>
+
+</div>
+
+
+
+
+
+
+
+
+
+        <!-- Форма для пошуку -->
+        <div class="search-box">
+            <input type="text" id="word-input" placeholder="Введіть слово  ...">
+            <button id="search-btn">Шукати</button>
+        </div>
+
+        <!-- Блок, де з'явиться результат -->
+        <div id="result-container" >
+            <div class="word-header">
+                <h2 id="result-word">Тут буде слово</h2>
+                <!-- Кнопка озвучки з іконкою динаміка -->
+                <button id="play-audio-btn" title="Прослухати вимову">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                  </svg> 
+                  Прослухати 
+                </button>
+
+<div class="audio-speed">
+  <label for="speed-control">
+    Швидкість: <span id="speed-value">1.0</span>
+  </label>
+
+  <input
+    id="speed-control"
+    type="range"
+    min="0.5"
+    max="2"
+    step="0.1"
+    value="1"
+  >
+</div>
+
+
+
+            </div>
+            <p id="result-definition">Тут буде значення слова...</p>
+        </div>
+    </div>
+ <section id="saved-words">
+  <h2>📚 Мої слова</h2>
+
+  <ul id="words-list"></ul>
+</section>
+
+    <!-- Підключаємо наш TypeScript/JavaScript файл (скомпільований) -->
+    <script src="bundle.js"></script>
+</body>
+</html>
